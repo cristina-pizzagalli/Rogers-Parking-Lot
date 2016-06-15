@@ -40,18 +40,28 @@ body {
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
   }
-  a.back, a.continue, a.menu, a.close {
+  a.back {
     position: absolute;
     top: 0px;
     display: block;
     height: 100%;
     line-height: 60px;
     font-size: 20px;
-    color: #ee2e24;
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 17px 30px;
+  }
+
+  a.back {
+    width: 60px;
+    text-indent: -200%;
+    background-image: image_url('/images/back.png');
+    left: 0px;
+    transition: all 0.5s ease;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 .content {

@@ -82,18 +82,25 @@ body {
     color: #222222;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif; }
-  .navbar a.back, .navbar a.continue, .navbar a.menu, .navbar a.close {
+  .navbar a.back {
     position: absolute;
     top: 0px;
     display: block;
     height: 100%;
     line-height: 60px;
     font-size: 20px;
-    color: #ee2e24;
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 17px 30px; }
+  .navbar a.back {
+    width: 60px;
+    text-indent: -200%;
+    background-image: url("../images/back.png");
+    left: 0px;
+    transition: all 0.5s ease; }
+    .navbar a.back:hover {
+      opacity: 0.5; }
 
 .content {
   display: block;

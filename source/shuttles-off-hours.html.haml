@@ -17,26 +17,19 @@ title: Shuttles off hours
               Walking Directions
 .app-wrapper
   .navbar
+    %a{:href=>"#", :class=>"back"} Back
     %h1
       Select parking lot
-  .content
-    %h2
-      Welcome to
-      %span
-        Rogers Cup<br/>
-        Parking Assistant
-    %h3
-      Choose an option below.
-    %ul
-      %a{:href=>"#"}
-        %li.driving
-          I want <strong>Driving Directions</strong> to my
-          parking lot
-      %a{:href=>"#"}
-        %li.transit
-          I have parked and want to <strong>Take a Shuttlebus</strong>
-      %a{:href=>"#"}
-        %li.walking
-          I have parked and want <strong>Walking Directions</strong> to the venue
-    .link
-      %a{:href=>"#", :target=>"blank"} Aviva Centre Visitor Information
+  .content.maps
+    #map
+
+:javascript
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 43.7715435, lng: -79.5821278},
+      zoom: 8
+    });
+    map.set('styles', [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"lightness":40},{"color":"#999999"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative.locality","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f1f1f1"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"color":"#9bd776"},{"lightness":"70"},{"saturation":"-40"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f1f1f1"},{"lightness":21}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#9bd776"},{"lightness":"70"},{"saturation":"-40"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#cccccc"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#6dd9e2"},{"lightness":"70"},{"saturation":"-40"}]}]);
+  }
+%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyC7b3gjD-1bdwCQVqInLrldk4JnalfWDRI&callback=initMap"}
