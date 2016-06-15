@@ -160,6 +160,7 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
   overflow: scroll;
+  z-index: 4;
   .popup-container {
     display: table;
     width: 100%;
