@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta charset='utf-8'>
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'>
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Map</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="stylesheets/site.css" rel="stylesheet" />
+    <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+    <script src="javascripts/all.js"></script>
+  </head>
+  <body class='maps'>
+    <div class='app-wrapper'>
+      <div class='navbar'>
+        <h1>
+          Select parking lot
+        </h1>
+      </div>
+      <div class='content maps'>
+        <div id='map'></div>
+      </div>
+    </div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script async='' defer='defer' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC7b3gjD-1bdwCQVqInLrldk4JnalfWDRI&amp;callback=initMap'></script>
+  </body>
+</html>

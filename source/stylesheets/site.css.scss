@@ -1,0 +1,250 @@
+@charset "utf-8";
+@import "normalize";
+
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: #ffffff;
+  color: #888888;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12x;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.app-wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-top: 5px solid #ee2e24;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 4px solid #ee2e24;
+  border-bottom: 1px solid #ee2e24;
+  background: #fff;
+  z-index: 3;
+  h1 {
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0;
+    font-size: 18px;
+    color: #222222;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+  }
+  a.back, a.continue, a.menu, a.close {
+    position: absolute;
+    top: 0px;
+    display: block;
+    height: 100%;
+    line-height: 60px;
+    font-size: 20px;
+    color: #ee2e24;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 17px 30px;
+  }
+}
+.content {
+  display: block;
+  position: relative;
+  padding: 100px 0px 40px 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  &.maps {
+    padding: 0px 0px 0px 0px;
+    #map {
+      height: 100%;
+    }
+  }
+  h2 {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #ee2e24;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    span {
+      font-size: 22px;
+      padding: 5px 0px;
+      display: block;
+      color: #222222;
+      font-weight: 700;
+    }
+  }
+  h3 {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #555555;
+    text-transform: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+  p {
+    padding: 10px 0px;
+    margin: 0px;
+  }
+  ul {
+    display: block;
+    width: 90%;
+    max-width: 380px;
+    margin: 20px auto;
+    a {
+      text-decoration: none;
+      color: #888888;
+      li {
+        display: block;
+        border: 2px solid #ee2e24;
+        text-align: left;
+        padding: 15px 20px 15px 80px;
+        margin: 10px 0px;
+        font-size: 14px;
+        min-height: 40px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        color: #888888;
+        background-image: url(/images/parking-icon.png);
+        background-repeat: no-repeat;
+        background-position: 20px center;
+        transition: all 0.5s ease;
+        strong {
+          color: #ee2e24;
+          text-decoration: underline;
+        }
+        &:hover {
+          background-color: #fafafa;
+        }
+        &.parking {
+          background-image: url(/images/parking-icon.png);
+        }
+        &.reminder {
+          background-color: #f5f5f5;
+          background-image: url(/images/remember-icon.png);
+        }
+        &.transit {
+          background-image: url(/images/transit-icon.png);
+        }
+        &.walking {
+          background-image: url(/images/walking-icon.png);
+        }
+      }    
+    }
+  }
+  .link a {
+    display: block;
+    color: #888888;
+    font-size: 12px;
+    padding: 0px;
+    transition: all 0.5s ease;
+    &:hover {
+      color: #ee2e24;
+    }
+  }
+}
+.overlay {
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: scroll;
+  .popup-container {
+    display: table;
+    width: 100%;
+    height: 100%;
+    .popup {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      .popup-content {
+        display: block;
+        background: #ffffff;
+        width: 80%;
+        padding: 20px;
+        max-width: 400px;
+        margin: 0px auto;
+        overflow: scroll;
+        h2 {
+          text-transform: none;
+          padding: 10px;
+          font-weight: 400;
+          margin: 20px auto 0px auto;
+          font-size: 16px;
+          color: #222222;
+          max-width: 300px;
+          font-family: 'Montserrat', sans-serif;
+        }
+        h3 {
+          text-transform: none;
+          padding: 10px;
+          font-weight: 400;
+          margin: 0px auto 0px auto;
+          font-size: 14px;
+          color: #888888;
+          max-width: 300px;
+          font-family: 'Montserrat', sans-serif;
+        }
+        .link a {
+          display: block;
+          color: #888888;
+          font-size: 12px;
+          padding: 0px;
+          transition: all 0.5s ease;
+          &:hover {
+            color: #ee2e24;
+          }
+        }
+        .close {
+          float: right;
+          cursor: pointer;
+          cursor: hand;
+          display: block;
+        }
+        ul {
+          display: block;
+          width: 90%;
+          max-width: 380px;
+          margin: 15px auto;
+          a {
+            text-decoration: none;
+            color: #ee2e24;
+            li {
+              display: block;
+              border: 2px solid #dddddd;
+              text-align: center;
+              padding: 10px 20px 10px 20px;
+              margin: 10px 0px;
+              font-size: 14px;
+              font-family: 'Montserrat', sans-serif;
+              font-weight: 400;
+              color: #ee2e24;
+              text-transform: uppercase;
+              transition: all 0.5s ease;
+              strong {
+                color: #ee2e24;
+                text-decoration: underline;
+              }
+              &:hover {
+                border: 2px solid #ee2e24;
+                color: #ffffff;
+                background-color: #ee2e24;
+              }
+            }    
+          }
+        }
+      }
+    }
+  }
+}

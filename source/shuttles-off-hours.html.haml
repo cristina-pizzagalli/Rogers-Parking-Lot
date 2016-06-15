@@ -1,0 +1,42 @@
+---
+title: Shuttles off hours
+---
+.overlay
+  .popup-container 
+    .popup
+      .popup-content
+        .close
+          %img{:src=>"images/close-btn.png"}
+        %h2
+          Buses are off-hours
+        %h3
+          Shuttlebusses will be running again at 09:00 AM
+        %ul
+          %a{:href=>"#"}
+            %li
+              Walking Directions
+.app-wrapper
+  .navbar
+    %h1
+      Select parking lot
+  .content
+    %h2
+      Welcome to
+      %span
+        Rogers Cup<br/>
+        Parking Assistant
+    %h3
+      Choose an option below.
+    %ul
+      %a{:href=>"#"}
+        %li.driving
+          I want <strong>Driving Directions</strong> to my
+          parking lot
+      %a{:href=>"#"}
+        %li.transit
+          I have parked and want to <strong>Take a Shuttlebus</strong>
+      %a{:href=>"#"}
+        %li.walking
+          I have parked and want <strong>Walking Directions</strong> to the venue
+    .link
+      %a{:href=>"#", :target=>"blank"} Aviva Centre Visitor Information

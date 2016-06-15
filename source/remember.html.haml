@@ -1,0 +1,45 @@
+---
+title: Remember where you parked?
+---
+.overlay
+  .popup-container 
+    .popup
+      .popup-content
+        .close
+          %img{:src=>"images/close-btn.png"}
+        %h2
+          Do you want the app to remember where you parked?
+        %ul
+          %a{:href=>"#"}
+            %li
+              YES
+          %a{:href=>"#"}
+            %li
+              NO
+        .link
+          %a{:href=>"#", :target=>"blank"} Aviva Centre Visitor Information
+.app-wrapper
+  .navbar
+    %h1
+      Parking Assistant
+  .content
+    %h2
+      Welcome to
+      %span
+        Rogers Cup<br/>
+        Parking Assistant
+    %h3
+      Choose an option below.
+    %ul
+      %a{:href=>"#"}
+        %li.driving
+          I want <strong>Driving Directions</strong> to my
+          parking lot
+      %a{:href=>"#"}
+        %li.transit
+          I have parked and want to <strong>Take a Shuttlebus</strong>
+      %a{:href=>"#"}
+        %li.walking
+          I have parked and want <strong>Walking Directions</strong> to the venue
+    .link
+      %a{:href=>"#", :target=>"blank"} Aviva Centre Visitor Information
